@@ -6,10 +6,9 @@
   <title>ابدئي بتصميم ملابسك</title>
   <style>
     html, body {
-      height: 100%;
       margin: 0;
-      display: flex;
-      flex-direction: column;
+      padding: 0;
+      height: 100%;
       background-color: white;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -18,11 +17,11 @@
     .hero-banner {
       background: linear-gradient(to bottom right, #f5ebff, #ecdfff);
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       padding: 2rem;
       gap: 2rem;
-      flex-wrap: wrap;
     }
 
     .hero-text {
@@ -52,20 +51,20 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    /* مقطع الفيديو */
+    /* الفيديو */
     .video-section {
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
       padding: 2rem;
       background-color: #faf5ff;
     }
 
     .video-box {
-      width: 400px;
-      border: 2px solid #d1b3ff;
+      width: 300px;
+      border: 3px solid #caa8f5;
       border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(141, 95, 211, 0.2);
+      box-shadow: 0 8px 20px rgba(90, 46, 157, 0.2);
     }
 
     .video-box video {
@@ -75,7 +74,6 @@
     }
 
     main {
-      flex: 1;
       padding: 2rem;
     }
 
@@ -130,10 +128,10 @@
     </div>
   </section>
 
-  <!-- قسم الفيديو -->
+  <!-- قسم الفيديو على الجانب الآخر -->
   <section class="video-section">
     <div class="video-box">
-      <video src="dress.raghad.mp4" controls></video>
+      <video src="dress.raghad.mp4" autoplay loop muted playsinline></video>
     </div>
   </section>
 
@@ -184,3 +182,7 @@
 
 </body>
 </html>
+git add . 
+git commit -m "4" 
+git push origin main
+
