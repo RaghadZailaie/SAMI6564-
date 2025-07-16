@@ -14,7 +14,65 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    /* الشريط العلوي والسفلي سيتم تحميلهم من ملفات منفصلة */
+    /* البنر */
+    .hero-banner {
+      background: linear-gradient(to bottom right, #f5ebff, #ecdfff);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      color: #5a2e9d;
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .hero-image {
+      flex: 1;
+      max-width: 400px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* مقطع الفيديو */
+    .video-section {
+      display: flex;
+      justify-content: flex-end;
+      padding: 2rem;
+      background-color: #faf5ff;
+    }
+
+    .video-box {
+      width: 400px;
+      border: 2px solid #d1b3ff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(141, 95, 211, 0.2);
+    }
+
+    .video-box video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
     main {
       flex: 1;
@@ -50,12 +108,34 @@
       margin-top: 0;
       color: #8e6ae3;
     }
+
+    footer {
+      margin-top: auto;
+    }
   </style>
 </head>
 <body>
 
   <!-- الشريط العلوي -->
   <div id="header"></div>
+
+  <!-- البنر -->
+  <section class="hero-banner">
+    <div class="hero-text">
+      <h1>صممي إطلالتك بنفسك</h1>
+      <p>ابدئي رحلتك في تصميم الأزياء مع أدواتنا الذكية، واختاري الفستان المثالي الذي يعبر عن أناقتك وشخصيتك.</p>
+    </div>
+    <div class="hero-image">
+      <img src="2948.jpg" alt="فستان أنيق">
+    </div>
+  </section>
+
+  <!-- قسم الفيديو -->
+  <section class="video-section">
+    <div class="video-box">
+      <video src="dress.raghad.mp4" controls></video>
+    </div>
+  </section>
 
   <!-- المحتوى الرئيسي -->
   <main>
@@ -79,7 +159,7 @@
   <!-- الشريط السفلي -->
   <div id="footer"></div>
 
-  <!-- استدعاء ملفات الهيدر والفوتر -->
+  <!-- تحميل الهيدر والفوتر -->
   <script>
     fetch("header.html")
       .then(res => {
